@@ -70,7 +70,7 @@ In the results of `SELECT` query, the values of `AggregateFunction` type have im
 `AggregatingMergeTree` materialized view that watches the `test.visits` table:
 
 ``` sql
-CREATE MATERIALIZED VIEW test.basic
+CREATE MATERIALIZED VIEW test.visits
 ENGINE = AggregatingMergeTree() PARTITION BY toYYYYMM(StartDate) ORDER BY (CounterID, StartDate)
 AS SELECT
     CounterID,
